@@ -33,13 +33,13 @@ body {
 }
 
 .card-img-top {
-    width: 100%;          /* Hace que la imagen ocupe todo el ancho del contenedor */
-    height: auto;         /* Mantiene la proporción original de la imagen */
-    object-fit: contain;  /* Asegura que la imagen se ajuste sin recortar ni deformar */
-    max-width: 200px;     /* Establece el ancho máximo de la imagen */
-    max-height: 150px;    /* Establece la altura máxima de la imagen */
-    margin: 0 auto;       /* Centra la imagen horizontalmente */
-    display: block;       /* Asegura que el contenedor de la imagen sea un bloque */
+    width: 100%;          
+    height: auto;        
+    object-fit: contain;  
+    max-width: 200px;     
+    max-height: 150px;    
+    margin: 0 auto;       
+    display: block;       
 }
 
 

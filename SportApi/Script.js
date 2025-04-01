@@ -69,7 +69,7 @@ function displayResults(teams) {
         const teamCard = document.createElement('div');
         teamCard.className = 'col-md-4 mb-3';
         
-        // Suponiendo que las imágenes locales están basadas en el nombre del equipo (en minúsculas y con guiones)
+        
         const teamImage = team.strTeam ? `resources/${team.strTeam.toLowerCase().replace(/\s+/g, '_')}_fc.png` : 'resources/default_image.jpg';
         
         teamCard.innerHTML = `
