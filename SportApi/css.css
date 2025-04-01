@@ -1,0 +1,81 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Estilo de las tarjetas de equipos */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card-img-top {
+    width: 100%;          /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto;         /* Mantiene la proporción original de la imagen */
+    object-fit: contain;  /* Asegura que la imagen se ajuste sin recortar ni deformar */
+    max-width: 200px;     /* Establece el ancho máximo de la imagen */
+    max-height: 150px;    /* Establece la altura máxima de la imagen */
+    margin: 0 auto;       /* Centra la imagen horizontalmente */
+    display: block;       /* Asegura que el contenedor de la imagen sea un bloque */
+}
+
+
+
+/* Estilo de los botones */
+.btn {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilo de los resultados y equipos guardados */
+#results, #savedTeams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-md-4 {
+    flex: 1 1 calc(33.333% - 20px);
+}
+
+.col-md-6 {
+    flex: 1 1 calc(50% - 20px);
+}
+
+/* Estilo para mensajes */
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Fondo y bordes de las tarjetas de equipos guardados */
+.card-body button {
+    border-radius: 5px;
+    font-size: 0.9rem;
+}

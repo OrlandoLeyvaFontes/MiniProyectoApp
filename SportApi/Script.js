@@ -1,4 +1,3 @@
-
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 const leagueSelect = document.getElementById('leagueSelect');
@@ -70,8 +69,12 @@ function displayResults(teams) {
         const teamCard = document.createElement('div');
         teamCard.className = 'col-md-4 mb-3';
         
+        // Suponiendo que las imágenes locales están basadas en el nombre del equipo (en minúsculas y con guiones)
+        const teamImage = team.strTeam ? `resources/${team.strTeam.toLowerCase().replace(/\s+/g, '_')}_fc.png` : 'resources/default_image.jpg';
+        
         teamCard.innerHTML = `
             <div class="card">
+                <img src="${teamImage}" class="card-img-top" alt="Logo de ${team.strTeam}">
                 <div class="card-body">
                     <h5 class="card-title">${team.strTeam}</h5>
                     <p class="card-text">Liga: ${team.strLeague}</p>
@@ -89,6 +92,9 @@ function displayResults(teams) {
         resultsContainer.appendChild(teamCard);
     });
 }
+
+
+
 
 function saveTeam(team) {
     const teamExists = savedTeams.some(t => t.idTeam === team.idTeam);
