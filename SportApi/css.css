@@ -1,12 +1,18 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    padding: 20px;
+    background: url('img/fondo3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
 
 .container {
     max-width: 1200px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
 }
 
 /* Estilo de las tarjetas de equipos */
@@ -34,15 +40,13 @@ body {
 
 .card-img-top {
     width: 100%;          
-    height: auto;        
+    height: auto;         
     object-fit: contain;  
     max-width: 200px;     
     max-height: 150px;    
     margin: 0 auto;       
     display: block;       
 }
-
-
 
 /* Estilo de los botones */
 .btn {

@@ -69,7 +69,6 @@ function displayResults(teams) {
         const teamCard = document.createElement('div');
         teamCard.className = 'col-md-4 mb-3';
         
-        
         const teamImage = team.strTeam ? `resources/${team.strTeam.toLowerCase().replace(/\s+/g, '_')}_fc.png` : 'resources/default_image.jpg';
         
         teamCard.innerHTML = `
@@ -86,17 +85,14 @@ function displayResults(teams) {
         
         const saveButton = teamCard.querySelector('.btn-save');
         saveButton.addEventListener('click', function() {
-            saveTeam(team);
+            saveTeam(team, teamImage);
         });
         
         resultsContainer.appendChild(teamCard);
     });
 }
 
-
-
-
-function saveTeam(team) {
+function saveTeam(team, teamImage) {
     const teamExists = savedTeams.some(t => t.idTeam === team.idTeam);
     
     if (teamExists) {
@@ -108,7 +104,8 @@ function saveTeam(team) {
         idTeam: team.idTeam,
         strTeam: team.strTeam,
         strLeague: team.strLeague,
-        strCountry: team.strCountry
+        strCountry: team.strCountry,
+        strTeamBadge: teamImage
     };
     
     savedTeams.push(teamToSave);
@@ -130,6 +127,7 @@ function displaySavedTeams() {
         
         teamElement.innerHTML = `
             <div class="card">
+                <img src="${team.strTeamBadge}" class="card-img-top" alt="Logo de ${team.strTeam}">
                 <div class="card-body">
                     <h5 class="card-title">${team.strTeam}</h5>
                     <p class="card-text">Liga: ${team.strLeague}</p>
